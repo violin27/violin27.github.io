@@ -1,0 +1,289 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f7fc;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2a3d66; /* Warna latar belakang navbar */
+    padding: 1px 0; /* Mengurangi padding vertikal navbar */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px; /* Menambah tinggi navbar yang lebih sesuai */
+    padding: 0 20px; /* Padding horizontal tetap untuk spasi kiri dan kanan */
+    margin: 0 auto;
+    flex-wrap: wrap; /* Membungkus elemen jika dibutuhkan */
+}
+
+.title {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff05b4;
+}
+
+.nama-pengguna {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Styling untuk dropdown button */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color: white;
+}
+
+/* Dropdown button */
+.dropdown-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 5px 10px;
+}
+
+/* Styling untuk dropdown content dan items */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #071071;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+    border-radius: 5px;
+}
+
+/* Menetapkan warna teks dalam dropdown menjadi putih */
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Hover effect untuk link */
+.dropdown-content a:hover {
+    background-color: #ff00ee;
+}
+
+/* Menampilkan dropdown ketika tombol diklik */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Styling untuk Search Bar */
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #ffffff;
+}
+
+/* Main Content */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.dashboard-content h2 {
+    font-size: 2.5rem;
+    color: #2a3d66;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.books h2 {
+    font-size: 2rem;
+    color: #2a3d66;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Styling untuk daftar buku dengan Grid */
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+/* Styling untuk masing-masing buku */
+.book {
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.book h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.book button {
+    background-color: #2a3d66;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.book button:hover {
+    background-color: #f50077;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .book-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsif untuk ukuran layar max-width: 768px */
+/* Responsif untuk ukuran layar max-width: 768px */
+@media (max-width: 768px) {
+    /* Pengaturan layout untuk book list */
+    .book-list {
+        grid-template-columns: 1fr; /* Mengubah grid menjadi 1 kolom */
+    }
+
+    .book {
+        max-width: 300px; /* Membatasi lebar maksimal buku */
+    }
+
+    /* Pengaturan untuk navbar container */
+    .navbar-container {
+        flex-direction: column; /* Menyusun navbar secara vertikal */
+        align-items: center; /* Mengatur item di tengah */
+        height: auto; /* Tinggi navbar menyesuaikan */
+        padding: 10px 10px; /* Padding untuk memberi ruang di navbar */
+    }
+
+    /* Pengaturan untuk tautan navbar */
+    .nav-links a {
+        margin: 10px 0; /* Margin vertikal untuk tiap link */
+        font-size: 1rem; /* Ukuran font standar untuk link */
+        padding: 10px;
+    }
+
+    .nav-links a:hover {
+        color: #ff05b4;
+    }
+
+    /* Pengaturan untuk title */
+    .title {
+        font-size: 1.5rem; /* Ukuran font title yang lebih kecil */
+        padding-bottom: 30px;
+    }
+
+    /* Pengaturan untuk profil */
+    .profil {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Jarak antara elemen nama, dan tombol */
+        margin-top: 20px; /* Memberikan jarak antara navbar links dan profil */
+    }
+
+    /* Pengaturan nama pengguna */
+    .nama-pengguna {
+        font-size: 15px; /* Ukuran font nama pengguna */
+        white-space: nowrap; /* Mencegah pemotongan nama pengguna menjadi beberapa baris */
+        margin-top: 0; /* Menghapus margin-top untuk menyelaraskan dengan tombol dropdown */
+    }
+
+    /* Pengaturan tombol dropdown */
+    .dropdown-btn {
+        font-size: 15px; /* Ukuran font tombol dropdown */
+        padding: 10px 15px; /* Padding agar tombol dropdown sama dengan nama pengguna */
+        display: flex;
+        align-items: center; /* Menyelaraskan teks dan ikon di dalam tombol */
+        justify-content: center; /* Menyelaraskan teks dan ikon secara horizontal */
+        cursor: pointer; /* Menambahkan pointer untuk menunjukkan bahwa ini adalah tombol */
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ff00ee;
+    }
+}
+
+
+
+/* Responsif untuk ukuran layar max-width: 480px */
+@media (max-width: 480px) {
+    /* Pengaturan padding navbar container */
+    .navbar-container {
+        padding: 0 15px; /* Mengurangi padding kiri dan kanan */
+    }
+
+    /* Pengaturan ukuran font link navbar */
+    .nav-links a {
+        font-size: 0.85rem; /* Ukuran font lebih kecil untuk tautan */
+    }
+
+    /* Pengaturan ukuran buku */
+    .book {
+        max-width: 100%; /* Membuat buku responsif penuh lebar */
+    }
+
+    /* Pengaturan ukuran font judul buku */
+    .book h3 {
+        font-size: 1rem; /* Ukuran font lebih kecil untuk judul buku */
+    }
+
+    /* Pengaturan padding dan ukuran font tombol */
+    .book button {
+        padding: 8px 10px; /* Padding tombol */
+        font-size: 0.85rem; /* Ukuran font tombol lebih kecil */
+    }
+}
+

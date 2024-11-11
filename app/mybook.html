@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark - Christy E-Library</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <div class="title">Christy E-Library</div>
+            <nav class="nav-links">
+                <a href="/index.html">Beranda</a>
+                <a href="/app/bookmark.html">Bookmark</a>
+                <a href="/app/bukusaya.html">Buku Saya</a>
+            </nav>
+            <div class="profil">
+                <span class="nama-pengguna" id="username-display">Nama Pengguna</span>
+                
+                <!-- Dropdown Button -->
+                <div class="dropdown">
+                    <button class="dropdown-btn">▼</button>
+                    <div class="dropdown-content">
+                        <a href="profile.html">Profil</a>
+                        <a href="/authentication/login.html" id="logout-btn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+     <!-- Main Content -->
+     <main class="container">
+        <div class="dashboard-content">
+            <h2>My Book</h2>
+        </div>
+
+               <!-- MyBook Section -->
+               <section class="mybook">
+                <h2>Baca Nanti</h2>
+                 <!-- Search Bar -->
+                 <input type="text" id="search-bar" placeholder="Cari Buku..." onkeyup="searchBooks()" />
+                <div class="book-list" id="book-list">
+                    <!-- Daftar buku dari JavaScript -->
+                </div>
+            </section>
+    </main>
+        <script src="mybook.js"></script>
+</body>
+</html>
